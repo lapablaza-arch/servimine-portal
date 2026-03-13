@@ -163,7 +163,7 @@
 </style>
 </head>
 <body>
-
+ 
 <div class="topbar">
   <div class="tb-brand">
     <div class="tb-logo">M</div>
@@ -171,7 +171,7 @@
   </div>
   <span class="tb-badge" id="clase-badge">CARGANDO...</span>
 </div>
-
+ 
 <div class="layout">
 <nav class="sidebar">
   <div class="sb-sec">Proceso</div>
@@ -187,11 +187,11 @@
   <div class="sb-sec">Comunicación</div>
   <div class="nav" onclick="go('chat')"><span>💬</span>Chat con Mandante <span class="nbadge ia">IA</span></div>
   <div class="sb-sec">Docente</div>
-  <div class="nav" onclick="go('config')"><span>⚙️</span>Configuración</div>
+  <div class="nav" onclick="pedirClave()"><span>⚙️</span>Configuración</div>
 </nav>
-
+ 
 <main class="main">
-
+ 
 <!-- ═══ DASHBOARD ═══ -->
 <div class="panel on" id="p-dashboard">
   <div class="ph"><h2>DASHBOARD LICITATORIO</h2><p>Licitación N° LC-2026-001 — Servicio de Mantenimiento Preventivo y Correctivo — Faena Norte</p></div>
@@ -225,7 +225,7 @@
     </div>
   </div>
 </div>
-
+ 
 <!-- ═══ CRONOGRAMA ═══ -->
 <div class="panel" id="p-cronograma">
   <div class="ph"><h2>CRONOGRAMA LICITATORIO</h2><p>Planificación completa — 13 Marzo al 15 Abril 2026</p></div>
@@ -240,7 +240,7 @@
     <table class="dt" id="tabla-clases"><thead><tr><th>#</th><th>Fecha</th><th>Mod.</th><th>Contenido</th><th>Variable ABP</th><th>Estado</th></tr></thead><tbody id="tbody-clases"></tbody></table>
   </div>
 </div>
-
+ 
 <!-- ═══ VARIABLE ═══ -->
 <div class="panel" id="p-variable">
   <div class="ph"><h2>VARIABLE ACTIVA</h2><p>Situación que tu equipo debe analizar y resolver hoy</p></div>
@@ -254,7 +254,7 @@
     <div id="var-proximas"></div>
   </div>
 </div>
-
+ 
 <!-- ═══ BASES ═══ -->
 <div class="panel" id="p-bases">
   <div class="ph"><h2>BASES DE LICITACIÓN</h2><p>Documentos oficiales del proceso LC-2026-001</p></div>
@@ -289,7 +289,7 @@
     </div>
   </div>
 </div>
-
+ 
 <!-- ═══ KIT ═══ -->
 <div class="panel" id="p-kit">
   <div class="ph"><h2>KIT DEL ESTUDIANTE</h2><p>Todo lo que necesitas para participar en el caso ABP</p></div>
@@ -309,14 +309,14 @@
     </div>
   </div>
 </div>
-
+ 
 <!-- ═══ RANKING ═══ -->
 <div class="panel" id="p-ranking">
   <div class="ph"><h2>RANKING DE EQUIPOS</h2><p>Puntuación acumulada — Actualizada clase a clase por el docente</p></div>
   <div class="card" style="margin-bottom:18px;border-left:3px solid var(--steel)"><h3>ℹ️ SOBRE EL RANKING</h3><p>El ranking refleja calidad y coherencia de decisiones tomadas clase a clase. Los equipos ganan puntos por: responder variables a tiempo, hacer consultas fundamentadas al mandante y mantener coherencia en su propuesta.</p></div>
   <div id="ranking-list"></div>
 </div>
-
+ 
 <!-- ═══ ESTADO ═══ -->
 <div class="panel" id="p-estado">
   <div class="ph"><h2>ESTADO DE TU PROPUESTA</h2><p>ServiMine Ltda. — Licitación LC-2026-001</p></div>
@@ -327,7 +327,7 @@
   <div style="background:#2a3a3d;height:7px;margin-bottom:14px"><div style="height:100%;background:var(--gold);transition:width 1s" id="avance-bar"></div></div>
   <div class="card"><h3>CHECKLIST DE AVANCE</h3><div id="checklist-content"></div></div>
 </div>
-
+ 
 <!-- ═══ CHAT ═══ -->
 <div class="panel" id="p-chat">
   <div class="ph"><h2>CHAT CON EL MANDANTE</h2><p>Consultas oficiales a Minera Los Cóndores S.A. — IA en rol de Gerencia de Contratos</p></div>
@@ -349,17 +349,17 @@
     </div>
   </div>
 </div>
-
+ 
 <!-- ═══ CONFIGURACIÓN (DOCENTE) ═══ -->
 <div class="panel" id="p-config">
   <div class="ph"><h2>⚙️ CONFIGURACIÓN</h2><p>Panel del docente — Instrucciones para publicar y gestionar el portal</p></div>
-
+ 
   <div class="cfg-banner">
     <h4>✅ ESTADO ACTUAL DEL PORTAL</h4>
     <p>Las <strong>variables se activan automáticamente por fecha</strong> — no necesitas hacer nada para eso.<br>
     Para que el Chat IA y las descargas funcionen, sigue las instrucciones de los pasos abajo.</p>
   </div>
-
+ 
   <!-- PASO 1: GITHUB -->
   <div class="step-box">
     <div class="step-n">1</div>
@@ -375,7 +375,7 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- PASO 2: CLAVE API (PROXY) -->
   <div class="step-box">
     <div class="step-n">2</div>
@@ -425,7 +425,7 @@
       </div>
     </div>
   </div>
-
+ 
   <!-- CAMPO URL PROXY -->
   <div class="card">
     <h3>CONFIGURAR URL DEL PROXY</h3>
@@ -436,7 +436,7 @@
     </div>
     <p style="margin-top:8px;font-size:11px;color:var(--mid)" id="proxy-status">Sin configurar — el chat usará modo de demostración</p>
   </div>
-
+ 
   <!-- PASO 3: DOCUMENTOS -->
   <div class="step-box">
     <div class="step-n">3</div>
@@ -448,7 +448,7 @@
       </div>
     </div>
   </div>
-
+ 
   <div class="card">
     <h3>ENLACES DE DOCUMENTOS</h3>
     <div style="display:grid;gap:8px">
@@ -460,7 +460,7 @@
     <button class="btn bg" style="margin-top:12px" onclick="saveLinks()">💾 Guardar enlaces</button>
     <p style="margin-top:6px;font-size:11px;color:var(--mid)" id="links-status">Sin configurar</p>
   </div>
-
+ 
   <!-- PASO 4: RANKING -->
   <div class="step-box">
     <div class="step-n">4</div>
@@ -469,19 +469,34 @@
       <div class="step-body">Edita los datos del ranking directamente aquí y guarda. Los alumnos verán la tabla actualizada al recargar la página.</div>
     </div>
   </div>
-
+ 
   <div class="card">
     <h3>EDITAR RANKING</h3>
     <div id="ranking-editor"></div>
     <button class="btn bg" style="margin-top:12px" onclick="saveRanking()">💾 Guardar ranking</button>
     <p style="margin-top:6px;font-size:11px;color:var(--mid)" id="ranking-status">—</p>
   </div>
-
+ 
 </div>
 <!-- FIN PANELES -->
 </main>
 </div>
-
+ 
+<!-- MODAL CONTRASEÑA DOCENTE -->
+<div id="modal-clave" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.75);z-index:999;align-items:center;justify-content:center;">
+  <div style="background:#1C2526;border:1px solid #C9A84C;border-top:4px solid #C9A84C;padding:32px;width:360px;max-width:90vw;">
+    <div style="font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;color:#C9A84C;margin-bottom:6px;">⚙️ ÁREA DOCENTE</div>
+    <div style="font-size:12px;color:#8FA3B1;margin-bottom:20px;">Ingresa la contraseña para acceder al panel de configuración.</div>
+    <input id="input-clave" type="password" placeholder="Contraseña" onkeydown="if(event.key==='Enter') verificarClave()"
+      style="width:100%;background:#111a1b;border:1px solid #3a4f54;color:#F5F0E8;padding:10px 14px;font-size:14px;font-family:'Source Sans 3',sans-serif;outline:none;margin-bottom:8px;">
+    <div id="clave-error" style="display:none;font-size:12px;color:#C94C4C;margin-bottom:8px;">❌ Contraseña incorrecta. Intenta nuevamente.</div>
+    <div style="display:flex;gap:8px;margin-top:4px;">
+      <button onclick="verificarClave()" style="flex:1;background:#C9A84C;border:none;color:#1C2526;padding:10px;font-weight:700;font-size:13px;cursor:pointer;font-family:'Source Sans 3',sans-serif;">ENTRAR</button>
+      <button onclick="cerrarModal()" style="background:transparent;border:1px solid #3a4f54;color:#8FA3B1;padding:10px 16px;font-size:13px;cursor:pointer;font-family:'Source Sans 3',sans-serif;">Cancelar</button>
+    </div>
+  </div>
+</div>
+ 
 <script>
 // ══════════════════════════════════════════════════════
 // DATOS DEL CASO — EDITA AQUÍ PARA ACTUALIZAR EL PORTAL
@@ -498,7 +513,7 @@ var CLASES = [
   {n:8, fecha:'2026-04-10', label:'10 Abr', mod:'🌐', cont:'Evidencias + Acreditaciones',                   var:'👷 Certificación vencida'},
   {n:9, fecha:'2026-04-15', label:'15 Abr', mod:'🏫', cont:'Gestión firma + Cierre Unidad',                 var:'🏁 Envío final + lecciones'},
 ];
-
+ 
 var VARIABLES = [
   {clase:1, titulo:'📨 ACABA DE LLEGAR EL RFP',
    body:'<strong>De:</strong> licitaciones@minaloscondores.cl<br><strong>Para:</strong> gerencia@servimineltda.cl<br><strong>Asunto:</strong> INVITACIÓN A LICITACIÓN — Servicio de Mantenimiento de Equipos de Extracción — Faena Norte<br><br>Estimados señores ServiMine Ltda.,<br><br>Minera Los Cóndores S.A. les invita formalmente a participar en el proceso licitatorio para el <strong>Servicio de Mantenimiento Preventivo y Correctivo de Equipos de Extracción en Faena Norte</strong>.<br><br>Fecha límite de entrega de propuesta: <strong>01 de Abril de 2026 — 17:00 hrs.</strong>',
@@ -516,7 +531,7 @@ var VARIABLES = [
    body:'Por fuentes del mercado (proveedores en común), ServiMine se entera que su principal competidor —  <strong>ManteMining SpA</strong> — habría bajado su precio referencial un <strong>8% respecto al monto de referencia</strong> de UF 12.000 anuales, posicionándose en torno a UF 11.040.<br><br>No es información oficial, pero es creíble.',
    pregunta:'¿Ajustan el precio ofertado? ¿Cómo equilibran rentabilidad vs competitividad? ¿Qué dice el TIR y VAN si bajan el precio? ¿Qué estrategia diferenciadora pueden usar además del precio?'},
 ];
-
+ 
 var HITOS = [
   {dot:'done', date:'11 Mar 2026', title:'Emisión de Bases', desc:'Bases Técnicas y Administrativas LC-2026-001 publicadas'},
   {dot:'act',  date:'13 Mar 2026', title:'Clase 1 — RFP & Kick Off', desc:'Inicio oficial del proceso licitatorio', gold:true},
@@ -529,7 +544,7 @@ var HITOS = [
   {dot:'up',   date:'08 Abr 2026', title:'Comunicación de resultado', desc:'Notificación formal del resultado.'},
   {dot:'up',   date:'15 Abr 2026', title:'Firma de contrato (estimada)', desc:'Firma con el adjudicatario.'},
 ];
-
+ 
 var CHECKLIST = [
   {done:true,  item:'RFP recibido y analizado'},
   {done:false, item:'Bases técnicas revisadas en detalle'},
@@ -542,17 +557,17 @@ var CHECKLIST = [
   {done:false, item:'Matriz de riesgos completada (mínimo 5)'},
   {done:false, item:'Propuesta enviada al mandante'},
 ];
-
+ 
 // RANKING (editar desde panel de configuración o directamente aquí)
 var RANKING_DATA = [
   {pos:1, team:'Equipo A', sub:'ServiMine Alpha', score:0, status:'Pendiente'},
   {pos:2, team:'Equipo B', sub:'ServiMine Beta',  score:0, status:'Pendiente'},
   {pos:3, team:'Equipo C', sub:'ServiMine Gamma', score:0, status:'Pendiente'},
 ];
-
+ 
 var PROXY_URL = localStorage.getItem('proxy_url') || '';
 var DOC_LINKS = JSON.parse(localStorage.getItem('doc_links') || '{}');
-
+ 
 // ══════════════════════════════════════════════════════
 // LÓGICA DE FECHA — CLASE ACTIVA
 // ══════════════════════════════════════════════════════
@@ -567,7 +582,7 @@ function getClaseActiva() {
   }
   return activa;
 }
-
+ 
 function getVariableActiva() {
   var clase = getClaseActiva();
   for (var i = 0; i < VARIABLES.length; i++) {
@@ -575,7 +590,7 @@ function getVariableActiva() {
   }
   return VARIABLES[0];
 }
-
+ 
 // ══════════════════════════════════════════════════════
 // RENDER
 // ══════════════════════════════════════════════════════
@@ -586,34 +601,34 @@ function renderAll() {
   var deadline = new Date('2026-04-01T17:00:00');
   var days = Math.max(0, Math.floor((deadline - hoy) / 86400000));
   var claseN = (typeof clase.n === 'number') ? clase.n : '⚡';
-
+ 
   // Badge topbar
   document.getElementById('clase-badge').textContent = 'CLASE ' + claseN + ' — ACTIVA';
-
+ 
   // Stats dashboard
   document.getElementById('cntd').textContent = days + 'd';
   document.getElementById('clase-num').textContent = claseN + '/9';
   document.getElementById('clase-fecha').textContent = clase.label + ' 2026';
   document.getElementById('var-num').textContent = typeof varActiva.clase === 'number' ? varActiva.clase : '—';
   document.getElementById('var-sub').textContent = varActiva.titulo.replace(/[^\w\s\u00C0-\u017E.!?]/g,'').substring(0,30)+'...';
-
+ 
   // Dashboard variable preview
   document.getElementById('dash-var-preview').innerHTML = '<span style="color:var(--warning)">' + varActiva.titulo + '</span><br><br>' + varActiva.body.substring(0,160).replace(/<[^>]+>/g,'') + '...';
-
+ 
   // Timeline dashboard
   var tlD = document.getElementById('tl-dashboard');
   tlD.innerHTML = '';
   HITOS.slice(0,5).forEach(function(h) {
     tlD.innerHTML += '<div class="ti"><div class="td '+h.dot+'"></div><div class="tdate">'+h.date+'</div><div class="ttitle'+(h.gold?' g':h.warn?' w':'')+'">'+h.title+'</div><div class="tdesc">'+h.desc+'</div></div>';
   });
-
+ 
   // Timeline hitos completo
   var tlH = document.getElementById('tl-hitos');
   tlH.innerHTML = '';
   HITOS.forEach(function(h) {
     tlH.innerHTML += '<div class="ti"><div class="td '+h.dot+'"></div><div class="tdate">'+h.date+'</div><div class="ttitle'+(h.gold?' g':h.warn?' w':'')+'">'+h.title+'</div><div class="tdesc">'+h.desc+'</div></div>';
   });
-
+ 
   // Tabla clases
   var tbody = document.getElementById('tbody-clases');
   tbody.innerHTML = '';
@@ -628,11 +643,11 @@ function renderAll() {
     var nColor = esActiva ? 'var(--gold)' : esEval ? 'var(--warning)' : '';
     tbody.innerHTML += '<tr><td style="font-weight:600;color:'+nColor+'">Clase '+c.n+'</td><td style="color:var(--steel)">'+c.label+'</td><td>'+c.mod+'</td><td>'+c.cont+'</td><td style="color:'+(esActiva?'var(--warning)':'var(--mid)')+'">'+c.var+'</td><td><span class="tag '+tagCls+'">'+tagLbl+'</span></td></tr>';
   });
-
+ 
   // Variable activa
   var vc = document.getElementById('variable-content');
   vc.innerHTML = '<div class="va"><div class="va-lbl">⚡ Variable Clase '+varActiva.clase+' — '+clase.label+' 2026</div><div class="va-title">'+varActiva.titulo+'</div><div class="va-body">'+varActiva.body+'</div><div class="va-q">🤔 <strong>Pregunta gatillante:</strong> '+varActiva.pregunta+'</div></div>';
-
+ 
   // Variables próximas
   var vp = document.getElementById('var-proximas');
   vp.innerHTML = '';
@@ -641,7 +656,7 @@ function renderAll() {
       vp.innerHTML += '<div class="lki"><span>🔒</span><span style="font-size:12px;color:var(--steel)">Clase '+v.clase+' — '+v.titulo.replace(/[^\w\s\u00C0-\u017E.!?]/g,'').substring(0,50)+'...</span></div>';
     }
   });
-
+ 
   // Checklist
   var cc = document.getElementById('checklist-content');
   cc.innerHTML = '';
@@ -654,28 +669,28 @@ function renderAll() {
   document.getElementById('avance-pct').textContent = pct + '%';
   document.getElementById('avance-sub').textContent = 'Clase ' + claseN + ' de 9';
   document.getElementById('avance-bar').style.width = pct + '%';
-
+ 
   // Ranking
   renderRanking();
-
+ 
   // Nav badge
   var vb = document.getElementById('var-badge');
   vb.textContent = varActiva.clase;
-
+ 
   // Links documentos
   applyLinks();
-
+ 
   // Chat status
   updateChatStatus();
-
+ 
   // Proxy input
   if (PROXY_URL) document.getElementById('proxy-url-input').value = PROXY_URL;
   applyDocInputs();
-
+ 
   // Ranking editor
   renderRankingEditor();
 }
-
+ 
 function renderRanking() {
   var rl = document.getElementById('ranking-list');
   if (!rl) return;
@@ -692,7 +707,7 @@ function renderRanking() {
     rl.innerHTML += '<div class="rr"><div class="rn '+pc+'">'+(i+1)+'</div><div class="ri"><div class="rt">'+r.team+'</div><div class="rs">'+r.sub+'</div></div><div class="rbw"><div class="rb"><div class="rbf" style="width:'+pct+'%"></div></div></div><div class="rsc">'+r.score+'</div><span class="rst '+stCls+'">'+(r.score>0?'Activo':'Pendiente')+'</span></div>';
   });
 }
-
+ 
 function renderRankingEditor() {
   var stored = localStorage.getItem('ranking_data');
   var data = stored ? JSON.parse(stored) : RANKING_DATA;
@@ -703,7 +718,7 @@ function renderRankingEditor() {
     re.innerHTML += '<div style="display:flex;gap:8px;align-items:center;margin-bottom:6px"><span style="width:100px;font-size:12px;color:var(--steel)">'+r.team+'</span><input id="rank-name-'+i+'" type="text" value="'+r.sub+'" placeholder="Nombre del equipo" style="flex:1;background:var(--dark);border:1px solid #3a4f54;color:var(--cream);padding:6px 10px;font-size:12px;font-family:\'Source Sans 3\',sans-serif;outline:none;"><input id="rank-score-'+i+'" type="number" value="'+r.score+'" min="0" max="100" style="width:70px;background:var(--dark);border:1px solid #3a4f54;color:var(--cream);padding:6px 10px;font-size:12px;font-family:\'Source Sans 3\',sans-serif;outline:none;text-align:center;"></div>';
   });
 }
-
+ 
 function saveRanking() {
   var stored = localStorage.getItem('ranking_data');
   var data = stored ? JSON.parse(stored) : RANKING_DATA;
@@ -717,7 +732,7 @@ function saveRanking() {
   document.getElementById('ranking-status').textContent = '✅ Ranking guardado — los alumnos lo verán al recargar';
   renderRanking();
 }
-
+ 
 function applyLinks() {
   var links = JSON.parse(localStorage.getItem('doc_links') || '{}');
   var map = {
@@ -730,7 +745,7 @@ function applyLinks() {
     else if (el) { el.href = '#'; el.onclick = function(e){ e.preventDefault(); alert('El docente aún no ha configurado el enlace de descarga. Solicítalo en clases.'); }; }
   });
 }
-
+ 
 function applyDocInputs() {
   var links = JSON.parse(localStorage.getItem('doc_links') || '{}');
   if (links.tec && document.getElementById('url-tec')) document.getElementById('url-tec').value = links.tec;
@@ -738,7 +753,7 @@ function applyDocInputs() {
   if (links.kit && document.getElementById('url-kit')) document.getElementById('url-kit').value = links.kit;
   if (links.abp && document.getElementById('url-abp')) document.getElementById('url-abp').value = links.abp;
 }
-
+ 
 function saveLinks() {
   var links = {
     tec: document.getElementById('url-tec').value.trim(),
@@ -750,7 +765,7 @@ function saveLinks() {
   document.getElementById('links-status').textContent = '✅ Enlaces guardados. Los alumnos pueden descargar ahora.';
   applyLinks();
 }
-
+ 
 function saveProxy() {
   var url = document.getElementById('proxy-url-input').value.trim();
   localStorage.setItem('proxy_url', url);
@@ -758,7 +773,7 @@ function saveProxy() {
   document.getElementById('proxy-status').textContent = url ? '✅ Proxy configurado: ' + url : 'Sin configurar';
   updateChatStatus();
 }
-
+ 
 function updateChatStatus() {
   var pu = localStorage.getItem('proxy_url') || '';
   var w = document.getElementById('chat-status-warn');
@@ -769,7 +784,7 @@ function updateChatStatus() {
     w.innerHTML = '<div class="chat-config-warn"><h4>⚙️ CONFIGURACIÓN REQUERIDA</h4><p>El Chat IA necesita configurarse con una clave API. Ve a <strong>⚙️ Configuración</strong> para activarlo.<br>El chat está en <strong>modo demostración</strong> hasta que configures el proxy.</p></div>';
   }
 }
-
+ 
 // ══════════════════════════════════════════════════════
 // NAVEGACIÓN
 // ══════════════════════════════════════════════════════
@@ -782,7 +797,7 @@ function go(id) {
   });
   window.scrollTo(0,0);
 }
-
+ 
 function swTab(el, id) {
   var par = el.closest('.panel');
   par.querySelectorAll('.tab').forEach(function(t){t.classList.remove('on');});
@@ -790,14 +805,14 @@ function swTab(el, id) {
   el.classList.add('on');
   document.getElementById(id).classList.add('on');
 }
-
+ 
 // ══════════════════════════════════════════════════════
 // CHAT IA
 // ══════════════════════════════════════════════════════
 var SYS = 'Eres la Gerencia de Contratos de Minera Los Condores S.A. Respondes consultas del proceso licitatorio LC-2026-001 para el Servicio de Mantenimiento Preventivo y Correctivo de Equipos de Extraccion Faena Norte.\n\nCONTEXTO:\n- Contrato 24 meses, monto referencial UF 12.000/anio\n- 35 equipos de extraccion\n- Disponibilidad minima: 88% mensual\n- Plazo propuesta: 01 abril 2026, 17:00\n- Art. 8.3: responsabilidad ambiental amplia (intencional, parte del aprendizaje)\n- Art. 5.3: reajuste por variacion costos externos mayor a 10%\n- Hay riesgo de aguas acidas en sector Pala N3 no declarado en bases\n\nINSTRUCCIONES: Responde SIEMPRE como Gerencia de Contratos. Tono formal, profesional, chileno. Maximo 100 palabras. Nunca salgas del rol.';
-
+ 
 var hist = [], busy = false;
-
+ 
 function addBub(txt, role) {
   var c = document.getElementById('cmsg');
   var d = document.createElement('div');
@@ -806,7 +821,7 @@ function addBub(txt, role) {
   d.innerHTML = '<div class="mn">'+nm+'</div><div class="mb">'+txt.replace(/\n/g,'<br>')+'</div>';
   c.appendChild(d); c.scrollTop = c.scrollHeight;
 }
-
+ 
 function showTyp() {
   var c = document.getElementById('cmsg'), d = document.createElement('div');
   d.className = 'msg bot'; d.id = 'typ';
@@ -814,7 +829,7 @@ function showTyp() {
   c.appendChild(d); c.scrollTop = c.scrollHeight;
 }
 function rmTyp() { var t=document.getElementById('typ'); if(t) t.remove(); }
-
+ 
 async function sm() {
   if (busy) return;
   var inp = document.getElementById('cinp'), txt = inp.value.trim();
@@ -862,17 +877,50 @@ async function sm() {
   busy = false; document.getElementById('csend').disabled = false;
   document.getElementById('cinp').focus();
 }
-
+ 
 function sq(t) { document.getElementById('cinp').value = t; sm(); }
-
+ 
 function copyCode() {
   var code = document.getElementById('worker-code').textContent;
   navigator.clipboard.writeText(code).then(function(){alert('Código copiado al portapapeles');});
 }
-
+ 
 // ══════════════════════════════════════════════════════
 // INIT
 // ══════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════
+// PROTECCIÓN PANEL DOCENTE
+// ══════════════════════════════════════════════════════
+var CONFIG_PASS = 'condores2026'; // ← CAMBIA ESTA CONTRASEÑA
+var configDesbloqueado = false;
+ 
+function pedirClave() {
+  // Si ya está desbloqueado en esta sesión, entra directo
+  if (configDesbloqueado) { go('config'); return; }
+  // Mostrar modal
+  document.getElementById('modal-clave').style.display = 'flex';
+  document.getElementById('input-clave').value = '';
+  setTimeout(function(){ document.getElementById('input-clave').focus(); }, 100);
+}
+ 
+function verificarClave() {
+  var ingresada = document.getElementById('input-clave').value;
+  if (ingresada === CONFIG_PASS) {
+    configDesbloqueado = true;
+    cerrarModal();
+    go('config');
+  } else {
+    document.getElementById('clave-error').style.display = 'block';
+    document.getElementById('input-clave').value = '';
+    document.getElementById('input-clave').focus();
+  }
+}
+ 
+function cerrarModal() {
+  document.getElementById('modal-clave').style.display = 'none';
+  document.getElementById('clave-error').style.display = 'none';
+}
+ 
 renderAll();
 setInterval(function(){
   var d = new Date('2026-04-01T17:00:00'), n = new Date();
